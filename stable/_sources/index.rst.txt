@@ -3,18 +3,30 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Development Documentation's documentation!
-=====================================================
+=============================================
+TorXakis Development Documentation
+=============================================
+
+Documentation version '|DOCVERSION|' for TorXakis version '|TOOLVERSION|'. 
+
+This documentation is also available as printable format as `PDF document <PDFDOCUMENTURL_>`_ .  
+For other versions see the `documentation overview webpage <DOCUMENT_OVERVIEW_URL_>`_. 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
+
+   intro
+   installation
+
+
+.. toctree::
+   :caption: Appendices
+   :hidden:
+
+   glossary
+   bibliography
+   genindex 
 
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
