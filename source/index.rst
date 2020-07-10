@@ -16,7 +16,14 @@ For other versions see the `documentation overview webpage <DOCUMENT_OVERVIEW_UR
    :caption: Contents
 
    intro
-   installation
+   repostruct
+   building
+   test
+   sqatt
+   continuousintegration.rst
+   website
+   documentation
+
 
 
 .. toctree::
