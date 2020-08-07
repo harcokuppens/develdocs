@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TorXakis Development Documentation &mdash; Development Documentation v0.9.0, Document version v0.0.5 documentation</title>
+  <title>TorXakis &mdash; Development Documentation v0.9.0, Document version v0.0.5 documentation</title>
   
 
   
@@ -36,7 +36,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="TorXakis" href="intro.html" /> 
+    <link rel="next" title="Repository structure" href="repostruct.html" />
+    <link rel="prev" title="TorXakis Development Documentation" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -50,7 +51,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> Development Documentation
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Development Documentation
           
 
           
@@ -86,9 +87,9 @@
             
             
               <p class="caption"><span class="caption-text">Contents</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">TorXakis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#acknowledgements">Acknowledgements</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TorXakis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="repostruct.html">Repository structure</a></li>
@@ -132,7 +133,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Development Documentation</a>
+          <a href="index.html">Development Documentation</a>
         
       </nav>
 
@@ -161,9 +162,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>TorXakis Development Documentation</li>
+      <li>TorXakis</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -177,8 +178,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="intro.html" class="btn btn-neutral float-right" title="TorXakis" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="repostruct.html" class="btn btn-neutral float-right" title="Repository structure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="TorXakis Development Documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -187,44 +190,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="torxakis-development-documentation">
-<h1>TorXakis Development Documentation<a class="headerlink" href="#torxakis-development-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Documentation version ‘v0.0.5’ for TorXakis version ‘v0.9.0’.</p>
-<p>This documentation is also available as printable format as <a class="reference external" href="https://github.com/harcokuppens/develdocs/releases/download/v0.0.5/TorXakis-v0.9.0_DeveloperGuide-v0.0.5.pdf">PDF document</a> .
-For other versions see the <a class="reference external" href="https://github.com/harcokuppens/develdocs/releases/">documentation overview webpage</a>.</p>
-<p>TorXakis API documentation can be found at: <a class="reference external" href="https://harcokuppens.github.io/TorXakis/">https://harcokuppens.github.io/TorXakis/</a></p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">TorXakis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#acknowledgements">Acknowledgements</a></li>
+  <div class="section" id="torxakis">
+<h1>TorXakis<a class="headerlink" href="#torxakis" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> is a tool for Model Based Testing.</p>
+<p>It is licensed under the <a class="reference external" href="LICENSE">BSD3 license</a>.</p>
+<p>TorXakis is written in <a class="reference external" href="https://www.haskell.org">Haskell</a> and uses
+<code class="docutils literal notranslate"><span class="pre">`stack</span></code> &lt;<a class="reference external" href="https://www.haskellstack.org">https://www.haskellstack.org</a>&gt;`__ as build tool. In addition
+TorXakis needs an
+<a class="reference external" href="https://en.wikipedia.org/wiki/Satisfiability_modulo_theories">SMT</a>
+solver, such as <a class="reference external" href="http://cvc4.cs.stanford.edu/web/">cvc4</a> or
+<a class="reference external" href="https://github.com/Z3Prover/z3">Z3</a>. The SMT Solver needs to support
+<a class="reference external" href="http://smtlib.cs.uiowa.edu/">SMTLIB</a> version 2.5, <a class="reference external" href="https://en.wikipedia.org/wiki/Algebraic_data_type">Algebraic Data
+Types</a> (as
+proposed for version 2.6), and
+<a class="reference external" href="http://cvc4.cs.stanford.edu/wiki/Strings">Strings</a>. The SMT Solvers
+are assumed to be located on the
+<a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a>. For
+development acceptance tests
+<a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">javac</a>
+is needed.</p>
+<p>The Haddock documentation is also available
+<a class="reference external" href="https://torxakis.github.io/TorXakis/doc/index.html">here</a>.</p>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>Part of the research and development of TorXakis is carried out</p>
+<ul class="simple">
+<li><p>as part of the NWO-TTW project 13859: SUMBAT: Supersizing Model-Based
+Testing.</p></li>
+<li><p>as part of the Enable-S3 program under the responsibility of ESI
+(TNO) with Philips as the carrying industrial partner. The Enable-S3
+research is supported by the Netherlands Ministry of Economic Affairs
+(Toeslag voor Topconsortia voor Kennis en Innovatie).</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="repostruct.html">Repository structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="building.html">Building</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="building.html#compiler-warnings-are-treated-as-errors">Compiler warnings are treated as errors</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="test.html">Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sqatt.html">Benchmarking: simple quality assurance tests for TorXakis (sqatt)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sqatt.html#introduction">Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="sqatt.html#integration-tests">Integration tests</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="sqatt.html#adding-new-tests">Adding new tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqatt.html#long-running-tests">Long-running tests</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="sqatt.html#benchmarks">Benchmarks</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="sqatt.html#tests-for-the-benchmarks">Tests for the benchmarks</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">Continuous Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="website.html">Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -236,8 +233,10 @@ For other versions see the <a class="reference external" href="https://github.co
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="intro.html" class="btn btn-neutral float-right" title="TorXakis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="repostruct.html" class="btn btn-neutral float-right" title="Repository structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="TorXakis Development Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
